@@ -46,7 +46,9 @@ resource "aws_security_group" "awsec2demo" {
 resource "aws_instance" "awsec2demo" {
     ami = "ami-0dbc3d7bc646e8516" # us-east-1
     instance_type = "t2.micro"
-
+ tags = {
+    Name = "MyEC2Instance"  # Specify the desired name for your EC2 instance
+  }
     network_interface {
       network_interface_id = aws_network_interface.awsec2demo.id
       device_index = 0
