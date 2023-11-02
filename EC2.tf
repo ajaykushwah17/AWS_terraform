@@ -1,5 +1,5 @@
 resource "aws_instance" "awsec2demo" {
-  ami           = "ami-067c21fb1979f0b27" # ap-south-1
+  ami           = "ami-05c0f5389589545b7" # ap-south-1
   instance_type = "t2.micro"
 
   tags = {
